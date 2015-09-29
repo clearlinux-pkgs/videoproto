@@ -4,7 +4,7 @@
 #
 Name     : videoproto
 Version  : 2.3.2
-Release  : 3
+Release  : 4
 URL      : http://xorg.freedesktop.org/releases/individual/proto/videoproto-2.3.2.tar.bz2
 Source0  : http://xorg.freedesktop.org/releases/individual/proto/videoproto-2.3.2.tar.bz2
 Summary  : Video extension headers
