@@ -4,7 +4,7 @@
 #
 Name     : videoproto
 Version  : 2.3.3
-Release  : 7
+Release  : 8
 URL      : http://xorg.freedesktop.org/releases/individual/proto/videoproto-2.3.3.tar.bz2
 Source0  : http://xorg.freedesktop.org/releases/individual/proto/videoproto-2.3.3.tar.bz2
 Summary  : Video extension headers
@@ -39,10 +39,12 @@ doc components for the videoproto package.
 %setup -q -n videoproto-2.3.3
 
 %build
+export LANG=C
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
@@ -62,7 +64,7 @@ rm -rf %{buildroot}
 /usr/include/X11/extensions/XvMCproto.h
 /usr/include/X11/extensions/Xvproto.h
 /usr/include/X11/extensions/vldXvMC.h
-/usr/lib64/pkgconfig/*.pc
+/usr/lib64/pkgconfig/videoproto.pc
 
 %files doc
 %defattr(-,root,root,-)
